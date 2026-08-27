@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -90,13 +92,11 @@ function App() {
       </div>
 
 
-      {/* ================= HERO / FIRST SECTION ================= */}
+      {/* ================= HERO ================= */}
 
       <section className="hero" id="home">
 
         <div className="hero-grid">
-
-          {/* LEFT SIDE NUMBER */}
 
           <div className="hero-meta">
 
@@ -111,8 +111,6 @@ function App() {
           </div>
 
 
-          {/* MAIN HERO CONTENT */}
-
           <div className="hero-main">
 
             <p className="hero-kicker">
@@ -121,8 +119,7 @@ function App() {
 
             <div className="education-label">
 
-             
-
+              
             </div>
 
 
@@ -176,13 +173,13 @@ function App() {
 
 
                   <a
-  href="/resume/resume.pdf"
-  target="_blank"
-  rel="noreferrer"
-  className="text-button"
->
-  VIEW RESUME ↗
-</a>
+                    href={`${BASE_URL}resume/resume.pdf`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-button"
+                  >
+                    VIEW RESUME ↗
+                  </a>
 
                 </div>
 
@@ -363,8 +360,6 @@ function App() {
 
         <div className="about-layout">
 
-          {/* LEFT SIDE */}
-
           <div className="about-title">
 
             <p>
@@ -381,8 +376,6 @@ function App() {
 
           </div>
 
-
-          {/* RIGHT SIDE */}
 
           <div className="about-content">
 
@@ -477,8 +470,6 @@ function App() {
 
         <div className="journey">
 
-          {/* 01 */}
-
           <div className="journey-step">
 
             <div className="journey-number">
@@ -511,8 +502,6 @@ function App() {
           </div>
 
 
-          {/* 02 */}
-
           <div className="journey-step">
 
             <div className="journey-number">
@@ -543,8 +532,6 @@ function App() {
             →
           </div>
 
-
-          {/* 03 */}
 
           <div className="journey-step">
 
@@ -577,8 +564,6 @@ function App() {
           </div>
 
 
-          {/* 04 */}
-
           <div className="journey-step">
 
             <div className="journey-number">
@@ -609,8 +594,6 @@ function App() {
             →
           </div>
 
-
-          {/* 05 */}
 
           <div className="journey-step">
 
@@ -692,7 +675,7 @@ function App() {
 
         <div className="learning-list">
 
-          {/* 01 */}
+          {/* FULL STACK */}
 
           <article className="learning-card">
 
@@ -717,7 +700,7 @@ function App() {
             </div>
 
             <a
-              href="/certificates/Full-Stack-Development.pdf"
+              href={`${BASE_URL}certificates/Full-Stack-Development.pdf`}
               target="_blank"
               rel="noreferrer"
             >
@@ -727,7 +710,7 @@ function App() {
           </article>
 
 
-          {/* 02 */}
+          {/* HATATHON */}
 
           <article className="learning-card">
 
@@ -752,7 +735,7 @@ function App() {
             </div>
 
             <a
-              href="/certificates/Hatathon.png"
+              href={`${BASE_URL}certificates/Hatathon.png`}
               target="_blank"
               rel="noreferrer"
             >
@@ -762,7 +745,7 @@ function App() {
           </article>
 
 
-          {/* 03 */}
+          {/* DEVOPS & CLOUD */}
 
           <article className="learning-card">
 
@@ -787,7 +770,7 @@ function App() {
             </div>
 
             <a
-              href="/certificates/DevOps-and-Cloud.pdf"
+              href={`${BASE_URL}certificates/DevOps-and-Cloud.pdf`}
               target="_blank"
               rel="noreferrer"
             >
@@ -797,7 +780,7 @@ function App() {
           </article>
 
 
-          {/* 04 */}
+          {/* RED HAT */}
 
           <article className="learning-card">
 
@@ -822,7 +805,7 @@ function App() {
             </div>
 
             <a
-              href="/certificates/Red-Hat-Seminar.pdf"
+              href={`${BASE_URL}certificates/Red-Hat-Seminar.pdf`}
               target="_blank"
               rel="noreferrer"
             >
@@ -832,7 +815,7 @@ function App() {
           </article>
 
 
-          {/* 05 */}
+          {/* ONE MILLION PROMPTERS */}
 
           <article className="learning-card">
 
@@ -857,7 +840,7 @@ function App() {
             </div>
 
             <a
-              href="/certificates/One-Million-Prompters.pdf"
+              href={`${BASE_URL}certificates/One-Million-Prompters.pdf`}
               target="_blank"
               rel="noreferrer"
             >
@@ -964,13 +947,11 @@ function App() {
       </section>
 
 
-      {/* ================= CREATIVE FOOTER ================= */}
+      {/* ================= FOOTER ================= */}
 
       <footer className="footer">
 
         <div className="footer-top">
-
-          {/* BRAND */}
 
           <div className="footer-brand">
 
@@ -986,8 +967,6 @@ function App() {
 
           </div>
 
-
-          {/* STATUS */}
 
           <div className="footer-status">
 
@@ -1009,8 +988,6 @@ function App() {
 
           </div>
 
-
-          {/* STACK */}
 
           <div className="footer-stack">
 
@@ -1034,7 +1011,7 @@ function App() {
         </div>
 
 
-        {/* FOOTER MIDDLE */}
+        {/* FOOTER LINKS */}
 
         <div className="footer-middle">
 
@@ -1055,8 +1032,6 @@ function App() {
           </div>
 
 
-          {/* FOOTER LINKS */}
-
           <div className="footer-links">
 
             <a
@@ -1064,26 +1039,22 @@ function App() {
               target="_blank"
               rel="noreferrer"
             >
-
               <span>
                 LINKEDIN
               </span>
 
               LinkedIn ↗
-
             </a>
 
 
             <a
               href="mailto:ahsanajabeen25@gmail.com"
             >
-
               <span>
                 EMAIL
               </span>
 
               Email ↗
-
             </a>
 
 
@@ -1092,13 +1063,11 @@ function App() {
               target="_blank"
               rel="noreferrer"
             >
-
               <span>
                 GITHUB
               </span>
 
               GitHub ↗
-
             </a>
 
           </div>
